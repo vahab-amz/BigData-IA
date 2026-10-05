@@ -9,6 +9,7 @@ total_notas = len(notas)
 print(f"Primera nota: {primera_nota}")
 print(f"Ultima nota: {ultima_nota}")
 print(f"Notas actualizadas: {notas}")
+print(f"Total de notas: {total_notas}")
 print("\n")
 
 
@@ -59,7 +60,7 @@ edad = 27
 tiene_permiso = True
 es_socio = True
 sancionado = False
-acceso_por_edad = edad < 16 and tiene_permiso
+acceso_por_edad = edad <= 16 and tiene_permiso
 acceso_por_socio = es_socio and not sancionado
 puede_acceder = acceso_por_edad or acceso_por_socio
 print(f"Acceso por edad: {acceso_por_edad}")
@@ -130,7 +131,7 @@ cupon_usado = "DESCUENTO20"
 precio_total = sum(precios)
 tiene_descuento = cupon_usado in cupones_validos or cliente["es_socio"]
 if tiene_descuento:
-    total_final  = 0.1 * precio_total
+    total_final  = 0.1 * precio_total + precio_total
 else:
     total_final = precio_total
 
